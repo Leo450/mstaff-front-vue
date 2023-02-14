@@ -6,12 +6,12 @@ services:
     build: docker/dev
     working_dir: /application
     ports:
-      - '21000:8080'
+      - '22000:8080'
     volumes:
       - .:/application
     networks:
-      - router.docker
+      - mstaff-micro.network
 
 networks:
-  router.docker:
+  mstaff-micro.network:
     external: true
