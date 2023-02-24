@@ -3,11 +3,11 @@ version: '3.1'
 services:
   prod:
     container_name: mstaff-micro__front-vue-1__prod__nginx
-    build: docker/prod
+    image: nginx:alpine
     working_dir: /application
     volumes:
-      - 'dist:/application'
-      - 'docker/prod/nginx.conf:/etc/nginx/conf.d/default.conf'
+      - './dist:/application'
+      - './docker/prod/nginx.conf:/etc/nginx/conf.d/default.conf'
     networks:
       - mstaff-micro.network
 
