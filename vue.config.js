@@ -1,6 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  publicPath: 'http://localhost:21000/',
+  publicPath: 'http://medikstaff.com:8080/front-vue-1/',
   transpileDependencies: true,
   devServer: {
     allowedHosts: 'all'
