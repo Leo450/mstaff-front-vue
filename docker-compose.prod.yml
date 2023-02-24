@@ -5,6 +5,9 @@ services:
     container_name: mstaff-micro__front-vue-1__prod__nginx
     build: docker/prod
     working_dir: /application
+    volumes:
+      - 'dist:/application'
+      - 'docker/prod/nginx.conf:/etc/nginx/conf.d/default.conf'
     networks:
       - mstaff-micro.network
 
